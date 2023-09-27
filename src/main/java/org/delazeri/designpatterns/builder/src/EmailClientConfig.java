@@ -7,7 +7,7 @@ public class EmailClientConfig {
     private final String password;
     private final boolean useSSL;
 
-    private EmailClientConfig(Builder builder){
+    private EmailClientConfig(EmailClientConfigBuilder builder){
         this.server = builder.server;
         this.port = builder.port;
         this.username = builder.username;
@@ -35,29 +35,29 @@ public class EmailClientConfig {
         return useSSL;
     }
 
-    public static class Builder {
+    public static class EmailClientConfigBuilder {
         private final String server;
         private final int port;
         private String username = "";
         private String password = "";
         private boolean useSSL = false;
 
-        public Builder(String server, int port) {
+        public EmailClientConfigBuilder(String server, int port) {
             this.server = server;
             this.port = port;
         }
 
-        public Builder setUsername(String username) {
+        public EmailClientConfigBuilder setUsername(String username) {
             this.username = username;
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public EmailClientConfigBuilder setPassword(String password) {
             this.password = password;
             return this;
         }
 
-        public Builder isUseSSL(boolean useSSL) {
+        public EmailClientConfigBuilder isUseSSL(boolean useSSL) {
             this.useSSL = useSSL;
             return this;
         }
