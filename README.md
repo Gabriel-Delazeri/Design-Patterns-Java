@@ -2,7 +2,7 @@
 
 1. [Builder](#builder)
 
-## [Builder](src/main/java/org/delazeri/designpatterns/builder)
+## [Builder](Design-Patterns-Java/src/main/java/org/delazeri/designpatterns/builder)
 
 O Builder é um design pattern criacional, e se torna útil nos seguintes casos:
 
